@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ce Mâncăm Azi? - Smart Meal & Shopping</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between max-w-md mx-auto shadow-2xl relative">
+
+    <!-- Top Header -->
+    <header class="bg-white px-6 py-4 border-b border-slate-100 flex justify-between items-center sticky top-0 z-10">
+        <div>
+            <h1 class="font-bold text-lg text-emerald-600 flex items-center gap-1">
+                🍲 Ce Mâncăm Azi?
+            </h1>
+            <p class="text-xs text-slate-400">Familia ta | 3 membri</p>
+        </div>
+        <div class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">
+            ⚡ Prototip
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="p-4 space-y-4 mb-20 overflow-y-auto">
+
+        <!-- SOS Gătit - Butonul de Urgență / Salvator -->
+        <div class="bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl p-4 text-white shadow-lg shadow-orange-500/20 flex items-center justify-between cursor-pointer active:scale-95 transition-transform" onclick="alert('Se generează rețeta de urgență în 3 secunde pe baza ingredientelor din frigider!')">
+            <div class="space-y-1">
+                <span class="bg-white/20 text-xs px-2.5 py-0.5 rounded-full font-medium">Ora 18:00 - Criză de timp?</span>
+                <h2 class="text-lg font-bold">SOS Gătit 🚨</h2>
+                <p class="text-xs text-orange-100">Rețetă instant din ce ai în casă, fără bătăi de cap!</p>
+            </div>
+            <div class="bg-white text-orange-600 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-md">
+                ⚡
+            </div>
+        </div>
+
+        <!-- Butonul Principal / Hero -->
+        <div class="bg-emerald-600 rounded-2xl p-5 text-white shadow-lg shadow-emerald-600/20 cursor-pointer active:scale-95 transition-transform" onclick="alert('Se deschide generatorul de rețete pentru azi!')">
+            <div class="flex justify-between items-start">
+                <div>
+                    <span class="bg-emerald-500/50 text-xs px-2.5 py-0.5 rounded-full font-medium">Meniu Inteligent</span>
+                    <h2 class="text-xl font-bold mt-1">Ce gătesc azi? 🍳</h2>
+                    <p class="text-xs text-emerald-100 mt-1">Alege rețeta perfectă pentru familia ta în câteva secunde.</p>
+                </div>
+                <span class="text-3xl">✨</span>
+            </div>
+        </div>
+
+        <!-- Cele 3 Opțiuni Principale -->
+        <div class="grid grid-cols-1 gap-3">
+            
+            <!-- Opțiunea 1: Ce am în frigider -->
+            <div onclick="alert('Ai selectat: Ce am în frigider. Aici bifezi ingredientele rămase!')" class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex items-center gap-4 cursor-pointer hover:border-emerald-200 transition-colors">
+                <div class="bg-blue-50 text-blue-600 p-3 rounded-xl text-xl">
+                    🧊
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-sm">Ce am în frigider</h3>
+                    <p class="text-xs text-slate-400">Anti-risipă & economie maximă de bani</p>
+                </div>
+                <span class="text-slate-300">➔</span>
+            </div>
+
+            <!-- Opțiunea 2: Pentru mine -->
+            <div onclick="alert('Ai selectat: Pentru mine. Rețete rapide doar pentru tine!')" class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex items-center gap-4 cursor-pointer hover:border-emerald-200 transition-colors">
+                <div class="bg-purple-50 text-purple-600 p-3 rounded-xl text-xl">
+                    👤
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-sm">Pentru mine</h3>
+                    <p class="text-xs text-slate-400">Dietă personalizată & masă rapidă</p>
+                </div>
+                <span class="text-slate-300">➔</span>
+            </div>
+
+            <!-- Opțiunea 3: Pentru toată familia -->
+            <div onclick="alert('Ai selectat: Pentru toată familia & Pachețel!')" class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex items-center gap-4 cursor-pointer hover:border-emerald-200 transition-colors">
+                <div class="bg-amber-50 text-amber-600 p-3 rounded-xl text-xl">
+                    👨‍👩‍👧‍👦
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-sm">Pentru toată familia</h3>
+                    <p class="text-xs text-slate-400">Gusturi împăcate & pachețel școală/serviciu</p>
+                </div>
+                <span class="text-slate-300">➔</span>
+            </div>
+
+        </div>
+
+        <!-- Banner Inovator: Listă de Cumpărături & Economie -->
+        <div class="bg-slate-900 text-white p-4 rounded-xl flex items-center justify-between">
+            <div class="space-y-0.5">
+                <span class="text-xs text-emerald-400 font-semibold">Smart Shopping</span>
+                <h4 class="font-bold text-sm">Lista de cumpărături</h4>
+                <p class="text-xs text-slate-400">Fără cumpărături impulsive la piață!</p>
+            </div>
+            <button onclick="alert('Se deschide lista de cumpărături generată automat!')" class="bg-emerald-500 text-white text-xs font-bold px-3 py-2 rounded-lg">
+                Deschide 🛒
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bg-white border-t border-slate-100 px-6 py-3 flex justify-around items-center fixed bottom-0 max-w-md w-full z-10">
+        <button class="flex flex-col items-center text-emerald-600 text-xs font-semibold">
+            <span class="text-lg">🏠</span> Acasă
+        </button>
+        <button onclick="alert('Secțiunea de Rețete')" class="flex flex-col items-center text-slate-400 text-xs font-medium">
+            <span class="text-lg">📖</span> Rețete
+        </button>
+        <button onclick="alert('Secțiunea de Cumpărături')" class="flex flex-col items-center text-slate-400 text-xs font-medium">
+            <span class="text-lg">🛒</span> Cumpărături
+        </button>
+        <button onclick="alert('Setări Familie')" class="flex flex-col items-center text-slate-400 text-xs font-medium">
+            <span class="text-lg">⚙️</span> Familie
+        </button>
+    </nav>
+
+</body>
+</html>
